@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>Speech to Text Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" href="application.css" rel="stylesheet" />
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+<script type="text/javascript" src="app.js"> </script>
+
+</head>
+<body>
+<div ng-app="speech" ng-controller="speechController as spc">
+  <!--<textarea contenteditable="false" ng-model="spc.final">
+  </textarea> -->
+  <!-- <textarea contenteditable ng-model="spc.interim.join(' ')">
+  </textarea> -->
+  <form>
+  <div class="form-group">
+      <!--<label for="final">Name:</label> -->
+      <input type="text" class="form-control " id="finalSpeechToTextId" contenteditable="false" ng-model="spc.final" style="width: 50%;">
+    <i class="fa fa-microphone" id="micId" ng-click="spc.start()" title="Search by voice"></i>
+</div>
+	
+  <!--<button ng-click="spc.start()">
+    Start
+  </button> -->
+  </form>
+</div>
+</body>
+</html>
